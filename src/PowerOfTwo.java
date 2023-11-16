@@ -7,7 +7,7 @@ public class PowerOfTwo {
 	
 	static boolean checkIsIntPowerOfTwo(int value) {
 		int absValue = Math.abs(value);
-
-		return (absValue & absValue - 1) == 0 ? true: false;
+		
+		return absValue == 0 | (absValue & absValue - 1) != 0 ? false: true;
 	}
 }
